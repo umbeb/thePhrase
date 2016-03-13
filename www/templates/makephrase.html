@@ -1,0 +1,42 @@
+<style>
+    .flex-container {
+        display: flex;
+        background-color: lightgrey;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flex-item {
+        background-color: cornflowerblue;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .parola{
+        margin-top: 30px;
+        margin-left: 50;
+        background-color:lemonchiffon;
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+</style>
+
+<ion-view view-title="CostruisciLaFrase">
+    <ion-content>
+        <div class="flex-container">
+            <div class="flex-item" ng-repeat="item in currentValues" on-tap="aggiungiParola(item.idNext,item.desc)">
+                {{item.desc}}
+            </div>
+        </div>
+
+        <div class="parola">{{parola}}</div>
+
+    </ion-content>
+</ion-view>
